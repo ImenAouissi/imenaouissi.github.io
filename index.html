@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags - TRÈS IMPORTANT pour Google -->
+    <title>Imen Aouissi - IT Specialist, DevOps & Network Security Engineer | Sousse, Tunisia</title>
+    <meta name="description" content="Imen Aouissi - IT Specialist, DevOps Engineer, Network Security Expert. Flask, FastAPI, Docker, Linux, Nginx, CCNA Trainer. Based in Sousse, Tunisia.">
+    <meta name="keywords" content="Imen Aouissi, IT Specialist Tunisia, DevOps Engineer Sousse, Network Security Tunisia, CCNA Trainer, Flask Developer, FastAPI, Docker, Imen Aouissi Sousse">
+    <meta name="author" content="Imen Aouissi">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph pour Facebook/LinkedIn - Votre photo apparaîtra ici -->
+    <meta property="og:title" content="Imen Aouissi - IT Specialist & DevOps Engineer">
+    <meta property="og:description" content="IT Specialist, DevOps & Network Security Engineer. Teacher & Trainer (CCNA, Security, Backend) based in Sousse, Tunisia.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://imenaouissi.github.io">
+    <meta property="og:image" content="https://imenaouissi.github.io/images/imen-aouissi.jpg">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Imen Aouissi - IT Specialist & DevOps Engineer">
+    <meta name="twitter:description" content="IT Specialist, DevOps & Network Security Engineer based in Sousse, Tunisia">
+    
+    <!-- Schema.org JSON-LD - Google comprendra mieux qui vous êtes -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Imen Aouissi",
+      "url": "https://imenaouissi.github.io",
+      "image": "https://imenaouissi.github.io/images/imen-aouissi.jpg",
+      "jobTitle": "IT Specialist, DevOps & Network Security Engineer",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Matrixel Business"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Sousse",
+        "addressCountry": "Tunisia"
+      },
+      "email": "imenneaouissii@gmail.com",
+      "sameAs": [
+        "https://www.linkedin.com/in/imen-aouissi-132600137/",
+        "https://github.com/ImenAouissi"
+      ],
+      "knowsAbout": ["Network Security", "DevOps", "Flask", "FastAPI", "Docker", "Linux", "CCNA", "Cybersecurity", "Backend Development"],
+      "alumniOf": {
+        "@type": "EducationalOrganization",
+        "name": "Institut Supérieur d'Informatique et des Technologies de Communication"
+      }
+    }
+    </script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        /* Photo de profil - AJOUTEZ VOTRE PHOTO ICI */
+        .profile-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 0 auto 1.5rem;
+            border: 5px solid white;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            object-fit: cover;
+            display: block;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.95;
+            margin-bottom: 1rem;
+        }
+
+        .contact-links {
+            margin-top: 1rem;
+        }
+
+        .contact-links a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1rem;
+            padding: 0.5rem 1rem;
+            background: rgba(255,255,255,0.2);
+            border-radius: 5px;
+            transition: background 0.3s;
+            display: inline-block;
+            margin-top: 0.5rem;
+        }
+
+        .contact-links a:hover {
+            background: rgba(255,255,255,0.3);
+        }
+
+        nav {
+            background: white;
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        nav ul li {
+            margin: 0.5rem 1.5rem;
+        }
+
+        nav ul li a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #764ba2;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        section {
+            background: white;
+            margin: 2rem 0;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            color: #667eea;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+        }
+
+        h3 {
+            color: #764ba2;
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .skill-category {
+            background: #f8f9ff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+        }
+
+        .skill-category h3 {
+            color: #667eea;
+            margin-top: 0;
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+
+        .skill-category ul {
+            list-style: none;
+        }
+
+        .skill-category li {
+            padding: 0.3rem 0;
+            color: #555;
+        }
+
+        .skill-category li:before {
+            content: "▹ ";
+            color: #667eea;
+            font-weight: bold;
+        }
+
+        .experience-item, .education-item {
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background: #f8f9ff;
+            border-radius: 8px;
+            border-left: 4px solid #764ba2;
+        }
+
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-bottom: 1rem;
+        }
+
+        .job-title {
+            font-weight: bold;
+            color: #764ba2;
+            font-size: 1.2rem;
+        }
+
+        .date {
+            color: #666;
+            font-style: italic;
+        }
+
+        .company {
+            color: #667eea;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .experience-item ul {
+            margin-left: 1.5rem;
+            margin-top: 0.5rem;
+        }
+
+        .experience-item li {
+            margin: 0.5rem 0;
+            color: #555;
+        }
+
+        .tech-stack {
+            margin-top: 1rem;
+            padding: 1rem;
+            background: white;
+            border-radius: 5px;
+        }
+
+        .tech-stack strong {
+            color: #667eea;
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            .profile-photo {
+                width: 120px;
+                height: 120px;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav ul li {
+                margin: 0.3rem 0;
+            }
+
+            .experience-header {
+                flex-direction: column;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <!-- AJOUTEZ VOTRE PHOTO ICI -->
+        <img src="images/imen-aouissi.jpg" alt="Imen Aouissi - IT Specialist" class="profile-photo">
+        
+        <h1>Imen Aouissi</h1>
+        <p>IT Specialist | DevOps & Network Security Engineer</p>
+        <p>Teacher & Trainer (CCNA, Security, Backend Development)</p>
+        <p>📍 Sousse, Tunisia</p>
+        <div class="contact-links">
+            <a href="mailto:imenneaouissii@gmail.com" aria-label="Email Imen Aouissi">✉️ Email</a>
+            <a href="https://www.linkedin.com/in/imen-aouissi-132600137/" target="_blank" rel="noopener" aria-label="LinkedIn Profile">💼 LinkedIn</a>
+            <a href="https://github.com/ImenAouissi" target="_blank" rel="noopener" aria-label="GitHub Profile">💻 GitHub</a>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#education">Education</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <section id="about">
+            <h2>About Imen Aouissi</h2>
+            <p><strong>Imen Aouissi</strong> is an experienced IT Specialist based in Sousse, Tunisia, with expertise in cybersecurity, network infrastructure, web development, and DevOps. Currently working at Matrixel Business, with a strong background in teaching and training professionals in network security (CCNA), system administration, and modern web technologies.</p>
+            <p>Specialized in building secure, scalable applications and managing complex IT infrastructures. Experience spans from pentesting and network security to full-stack development with Python (Flask, FastAPI), JavaScript, Docker, and modern frameworks.</p>
+        </section>
+
+        <section id="skills">
+            <h2>Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Network & Security</h3>
+                    <ul>
+                        <li>TCP/IP, VPN, SSL/TLS, VLAN</li>
+                        <li>Proxy, Reverse Proxy, SSH</li>
+                        <li>PfSense, IDS/IPS</li>
+                        <li>Pentesting, OWASP</li>
+                        <li>Nessus, Metasploit</li>
+                        <li>Fortinet Firewall</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h3>DevOps & Cloud</h3>
+                    <ul>
+                        <li>Docker, Docker Compose</li>
+                        <li>GitLab CI/CD, GitHub</li>
+                        <li>Nginx, Apache</li>
+                        <li>OVH Cloud Platform</li>
+                        <li>Linux Administration</li>
+                        <li>Infrastructure as Code</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Backend Development</h3>
+                    <ul>
+                        <li>Python: Flask, Django, FastAPI</li>
+                        <li>Node.js: Express.js, NestJS</li>
+                        <li>REST API, SOAP API</li>
+                        <li>PostgreSQL, MongoDB</li>
+                        <li>SQL Server</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Frontend Development</h3>
+                    <ul>
+                        <li>Next.js, React</li>
+                        <li>HTML5, CSS3</li>
+                        <li>JavaScript, TypeScript</li>
+                        <li>AngularJS</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Monitoring & Automation</h3>
+                    <ul>
+                        <li>Grafana, Zabbix, NetData</li>
+                        <li>Shell Scripting</li>
+                        <li>Python Automation</li>
+                        <li>System Monitoring</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Systems & Infrastructure</h3>
+                    <ul>
+                        <li>Linux: Ubuntu, Kali Linux</li>
+                        <li>Windows Server, Windows 11</li>
+                        <li>Active Directory</li>
+                        <li>Dell Server, NAS</li>
+                        <li>Network Architecture</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience">
+            <h2>Professional Experience</h2>
+
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div>
+                        <div class="job-title">IT Specialist</div>
+                        <div class="company">Matrixel Business - Sousse, Tunisia</div>
+                    </div>
+                    <div class="date">September 2023 - Present</div>
+                </div>
+                <p><strong>Key Project:</strong> Migration of Excel VBA program to Flask web application with SQL Server, implementation of secure server infrastructure interconnected between Tunisia and UK.</p>
+                <div class="tech-stack">
+                    <strong>Technologies:</strong> Flask, SQL Server, VBA, Python, HTML5, CSS, JavaScript, NAS, Active Directory, Dell Server, Fortinet VPN, Firewalls, IP Cameras, Windows Server
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div>
+                        <div class="job-title">Instructor - IT & Cybersecurity</div>
+                        <div class="company">IMSET - Sousse, Tunisia</div>
+                    </div>
+                    <div class="date">October 2022 - Present</div>
+                </div>
+                <p><strong>Teaching Areas:</strong></p>
+                <ul>
+                    <li>Network Security & Application Security</li>
+                    <li>Network Operating Systems</li>
+                    <li>Programming: C++, JavaScript (Next.js), Node.js (Express.js, NestJS), Python (FastAPI)</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div>
+                        <div class="job-title">CCNA Trainer (300-201)</div>
+                        <div class="company">Forma Plus - Sousse, Tunisia</div>
+                    </div>
+                    <div class="date">June 2023 - November 2023</div>
+                </div>
+                <p>Delivered professional training for CCNA 300-201 certification preparation.</p>
+            </div>
+
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div>
+                        <div class="job-title">Software Developer</div>
+                        <div class="company">Relead - Sousse, Tunisia</div>
+                    </div>
+                    <div class="date">August 2022 - March 2023</div>
+                </div>
+                <p><strong>Infrastructure Project:</strong> Installation, configuration, and management of network infrastructure.</p>
+                <ul>
+                    <li>Installation and configuration of operating systems on Relead Box</li>
+                    <li>Implementation and hosting of code on GitLab</li>
+                    <li>Hosted captive portal on remote server</li>
+                    <li>Network infrastructure management</li>
+                    <li>Nginx server configuration</li>
+                    <li>Reverse tunnel configuration on routers</li>
+                    <li>DNS configuration on OVH</li>
+                    <li>Let's Encrypt certificate generation</li>
+                    <li>Security testing and penetration testing</li>
+                    <li>Installation task automation</li>
+                </ul>
+                <p><strong>Web Application Project:</strong> Designed and developed invoice management web application.</p>
+                <div class="tech-stack">
+                    <strong>Technologies:</strong> Python, Flask, MongoDB, JavaScript, HTML5, CSS, GitLab, Linux, Nessus, Metasploit, OWASP, Nginx, Shell Scripts, NetData, OpenWrt, SpringBoot, AngularJS, PostgreSQL
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div>
+                        <div class="job-title">Web Developer</div>
+                        <div class="company">Funder - Sousse, Tunisia</div>
+                    </div>
+                    <div class="date">October 2021 - February 2022</div>
+                </div>
+                <p><strong>Project:</strong> Optimization and update of existing codebase.</p>
+                <div class="tech-stack">
+                    <strong>Technologies:</strong> Python, Django, GitLab, PostgreSQL, JavaScript, Docker Compose, Linux
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div>
+                        <div class="job-title">Software Engineering Intern</div>
+                        <div class="company">Relead - Sousse, Tunisia</div>
+                    </div>
+                    <div class="date">March 2021 - August 2021</div>
+                </div>
+                <p><strong>Project:</strong> Image processing and golfer movement recognition using artificial intelligence.</p>
+                <div class="tech-stack">
+                    <strong>Technologies:</strong> Python, PyTorch, CNN, RNN, Google Colab, Jupyter Notebook
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div>
+                        <div class="job-title">Computer Science Teacher</div>
+                        <div class="company">Lycée Privé Jawhara - Sousse, Tunisia</div>
+                    </div>
+                    <div class="date">September 2020 - June 2022</div>
+                </div>
+                <p><strong>Teaching:</strong> Python Programming, Relational Databases, Web Security, HTML/CSS</p>
+            </div>
+        </section>
+
+        <section id="education">
+            <h2>Education</h2>
+
+            <div class="education-item">
+                <div class="experience-header">
+                    <div>
+                        <div class="job-title">Professional Master's Degree in Systems and Network Security</div>
+                        <div class="company">Higher Institute of Computer Science and Communication Technologies (IMSET) - Hammam Sousse, Tunisia</div>
+                    </div>
+                    <div class="date">July 2022</div>
+                </div>
+            </div>
+
+            <div class="education-item">
+                <div class="experience-header">
+                    <div>
+                        <div class="job-title">Applied Bachelor's Degree in Computer Networks</div>
+                        <div class="company">Higher Institute of Computer Science and Communication Technologies (IMSET) - Hammam Sousse, Tunisia</div>
+                    </div>
+                    <div class="date">June 2017</div>
+                </div>
+            </div>
+
+            <div class="education-item">
+                <div class="experience-header">
+                    <div>
+                        <div class="job-title">Baccalaureate in Experimental Sciences</div>
+                        <div class="company">Lycée Secondaire Sidi El-Hani - Sousse, Tunisia</div>
+                    </div>
+                    <div class="date">July 2014</div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Imen Aouissi - IT Specialist, DevOps & Network Security Engineer</p>
+        <p>Sousse, Tunisia | Flask • FastAPI • Docker • Linux • CCNA Trainer</p>
+        <p>Built with passion for technology and security.</p>
+    </footer>
+</body>
+</html>
